@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Patient Portal</title>
+    <script type="text/javascript">
+    function goToNewPage()
+    {
+        var url = document.getElementById('list').value;
+        if(url != 'none') {
+            window.location = url;
+        }
+    }
+    </script>
+    <div class = "row">
+        <div class = "column left" style="background-color:#aaa;">
+            <img src="static/logo-pennstate.png" width = "100%" height=auto>
+        </div>
+        <div class = "column right" style="background-color:#aaa;">
+            <h1>Hospital Patient Portal</h1>
+            <h4>This portal allows users to add and delete patient names from the hospital database</h4>
+        </div>
+    </div>
+</head>
+<body>
+<center>
+<br>
+    <form>
+        <select name="list" id="list" accesskey="target">
+            <option value='none' selected>Choose an action</option>
+            <option value="/name">Add a Patient</option>
+            <option value="/delete">Delete a Patient</option>
+        </select>
+        <input type=button value="Submit" onclick="goToNewPage()" />
+    </form>
+
+</center>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+<style>
+    .column {
+        float: left;
+    }
+
+    .left {
+        width: 10%;
+    }
+
+    .right {
+        width: 90%;
+        padding:10px;
+    }
+
+</style>
